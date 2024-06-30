@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white flex items-center justify-center min-h-screen">
+    <div class="max-w-4xl w-full bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg shadow-lg rounded-xl p-8 m-4">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+            <div class="md:w-1/2">
+                <h1 class="text-4xl font-bold mb-4 float-animation">Welcome to My World Run Container 2</h1>
+                <div class="space-y-2">
+                    <p class="text-xl"><span class="font-bold">Name:</span> Sittiporn</p>
+                    <p class="text-xl"><span class="font-bold">Surname:</span> Emprakhon</p>
+                    <p class="text-xl"><span class="font-bold">Student ID:</span> 66130521</p>
+                </div>
+            </div>
+            <div class="md:w-1/2 mt-8 md:mt-0">
+                <img src="/static/profile.jpg" alt="Profile Picture" class="w-64 h-64 object-cover mx-auto rounded-full shadow-xl transform hover:scale-105 transition duration-300">
+            </div>
+        </div>
+        
+        <div class="mt-12">
+            <h2 class="text-3xl font-semibold mb-4">My Article</h2>
+            <p class="text-lg leading-relaxed">
+               
+            </p>
+        </div>
+         <a href="/" onclick="javascript:window.location.port='8080'; return false;">Click To 8080</a>
+    </div>
+</body>
+</html>
