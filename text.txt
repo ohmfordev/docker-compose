@@ -6,17 +6,12 @@ services:
       dockerfile: Dockerfile1
     image: server1
     ports:
-      - "8080:8080"
-    volumes:
-      - ./server1/index.html:/app/index.html
-
-
+      - "8000:8000"
   server2:
-    build:
-      context: .
-      dockerfile: Dockerfile2
-    image: server2
+    image: golang-1.21
     ports:
-      - "8081:8081"
+      - "80:8001"
+    volumes:
+      - ./server2/index.html:/app/index.html
 
       

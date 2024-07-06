@@ -8,13 +8,13 @@ services:
     ports:
       - "8000:8000"
   server2:
-    build:
-      context: .
-      dockerfile: Dockerfile2
-    image: server2
-    ports:
-      - "80:8001"
+    image: golang:1.21rc2-alpine
     volumes:
-      - ./server2/index.html:/app/index.html
+      - ./server2:/app  # mount โฟลเดอร์ที่มีโค้ดของคุณเข้าไปใน container
+      # - ./server2/index.html:/app/index.html
+    working_dir: /app
+    command: go run main.go  # รันโปรแกรม main.go ของคุณ
+    ports:
+      - "80:8001"  # map port 8001 ของ container เข้ากับ port 8001 ของ host
 
       
