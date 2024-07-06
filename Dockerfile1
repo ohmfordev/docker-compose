@@ -12,5 +12,5 @@ RUN go build -o main .
 
 COPY server1/index.html ./
 
-EXPOSE 8080
+EXPOSE 8000
 CMD ["./main"]
